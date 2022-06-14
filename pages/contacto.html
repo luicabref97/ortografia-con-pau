@@ -5,21 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ortografía con Pau</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="shortcut icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referer="no-referrer"/> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
-<body>
+<body cz-shortcut-listen="true">
     <header class="main-header">
-        <input type="checkbox" id="menu">
         <nav class="nav-bar">
             <div class="nav-bar__menu-toggle">
-                <label class="menu-toggle__label" for="menu">
-                    <i class="fas fa-bars" id="burguer"></i>
-                    <i class="fas fa-times" id="x"><span class="none">.</span></i>
-                </label>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fas fa-bars" id="burguer" title="burguer"></i></button>
             </div>
             <picture class="nav-bar__logo">
                 <a href="../index.html" aria-label="home">
@@ -55,51 +52,56 @@
                 </a>
             </div>
         </nav>
-        <sidebar class="sidebar animate__animated animate__slideInLeft">
-            <ul class="sidebar__list">
-                <li class="sidebar__item">
-                    <a class="sidebar__item-link" href="../index.html">Inicio</a>
-                </li>
-                <li class="sidebar__item">
-                    <a class="sidebar__item-link" href="./sobremi.html">Sobre mí</a>
-                </li>
-                <li class="sidebar__item">
-                    <a class="sidebar__item-link" href="./blog.html">Blog</a>
-                </li>
-                <li class="sidebar__item">
-                    <a class="sidebar__item-link" href="./servicios.html">Servicios</a>
-                </li>
-            </ul>
-            <section class="sidebar__contact"> 
-                <div class="sidebar__division-line"></div>
-                <p class="sidebar__contact-mail">mail@mail.com</p>
-                <ul class="sidebar__social-list">
-                    <li class="sidebar__social-icon">
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin"></i>
-                            <span class="none">.</span>
-                        </a>
+        <sidebar class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a class="sidebar__item-link" href="../index.html">Inicio</a>
                     </li>
-                    <li class="sidebar__social-icon">
-                        <a href="https://es-la.facebook.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-facebook"></i>
-                            <span class="none">.</span>
-                        </a>
+                    <li class="sidebar__item">
+                        <a class="sidebar__item-link" href="./sobremi.html">Sobre mí</a>
                     </li>
-                    <li class="sidebar__social-icon">
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-instagram"></i>
-                            <span class="none">.</span>
-                        </a>
+                    <li class="sidebar__item">
+                        <a class="sidebar__item-link" href="./blog.html">Blog</a>
                     </li>
-                    <li class="sidebar__social-icon">
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-twitter"></i>
-                            <span class="none">.</span>
-                        </a>
+                    <li class="sidebar__item">
+                        <a class="sidebar__item-link" href="./servicios.html">Servicios</a>
                     </li>
                 </ul>
-            </section>
+                <section class="sidebar__contact"> 
+                    <div class="sidebar__division-line"></div>
+                    <a href="mailto:mail@mail.com" class="sidebar__contact-mail">mail@mail.com</a>
+                    <ul class="sidebar__social-list">
+                        <li class="sidebar__social-icon">
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                                <span class="none">.</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__social-icon">
+                            <a href="https://es-la.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook"></i>
+                                <span class="none">.</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__social-icon">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                                <span class="none">.</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__social-icon">
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                                <span class="none">.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </sidebar>
     </header>
     <main class="main-body__contact">
@@ -157,6 +159,7 @@
         </section>
     </footer>
     <div class="go-up"><a href="#contacto" title="go up"><i class="fas fa-arrow-up"></i></a></div>
+    <script src="../jsB/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
