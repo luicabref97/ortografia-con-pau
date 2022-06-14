@@ -417,11 +417,6 @@
     text-decoration: none;
     color: rgba(0, 0, 0, 0.61);
 }
-
-
-@media (max-width: 1200px) {
-    
-}
 @media (min-width:320px) and (max-width: 800px) {
     .main-body__about-section {
         padding-left: 10%;
