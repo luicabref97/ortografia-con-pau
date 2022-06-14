@@ -385,7 +385,7 @@
 }
 .blog-section__article-image {
     display: block;
-    background-image: url('/images/group1.png');
+    background-image: url('../images/group1.png');
     height: 200px;
     background-size: cover;
 }
