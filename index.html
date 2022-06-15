@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referer="no-referrer"/> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="dist/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -16,7 +17,9 @@
     <header class="main-header">
         <nav class="nav-bar">
             <div class="nav-bar__menu-toggle">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fas fa-bars" id="burguer" title="burguer"></i></button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <i class="fas fa-bars" id="burguer" title="burguer"></i>
+                </button>
             </div>
             <picture class="nav-bar__logo">
                 <a href="index.html" aria-label="home">
@@ -152,50 +155,51 @@
                 <input class="form__submit" type="submit" name="recent-post" value="&#xf002">
             </form>
             <section class="blog-section__articles">
-                <article class="blog-section__article" data-aos="fade-up">
-                    <picture class="blog-section__article-image"></picture>
-                    <div class="blog-section__article-content">
-                        <h3 class="blog-section__article-title">Lorem Ipsum Dolor</h3>
-                        <p class="blog-section__article-comments">
+                <article class="card" data-aos="fade-up">
+                    <img src="images/imgcard.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
                             <i class="icon-views">&#xf06e</i> <span class="views">0</span> <span>Vistas</span> • 18 Mar, 2019 • <span class="commemts">0</span> Comentarios
                         </p>
-                        <p class="blog-section__article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="blog-section__article-btn-in"><a href="#" target="_blank" rel="noopener noreferrer">Continuar leyendo...</a></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Continuar leyendo...</a>
                     </div>
                 </article>
-                <article class="blog-section__article" data-aos="fade-up">
-                    <picture class="blog-section__article-image"></picture>
-                    <div class="blog-section__article-content">
-                        <h3 class="blog-section__article-title">Lorem Ipsum Dolor</h3>
-                        <p class="blog-section__article-comments">
+                <article class="card" data-aos="fade-up">
+                    <img src="images/imgcard.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
                             <i class="icon-views">&#xf06e</i> <span class="views">0</span> <span>Vistas</span> • 18 Mar, 2019 • <span class="commemts">0</span> Comentarios
                         </p>
-                        <p class="blog-section__article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="blog-section__article-btn-in"><a href="#" target="_blank" rel="noopener noreferrer">Continuar leyendo...</a></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Continuar leyendo...</a>
                     </div>
                 </article>
-                <article class="blog-section__article" data-aos="fade-up">
-                    <picture class="blog-section__article-image"></picture>
-                    <div class="blog-section__article-content">
-                        <h3 class="blog-section__article-title">Lorem Ipsum Dolor</h3>
-                        <p class="blog-section__article-comments">
+                <article class="card" data-aos="fade-up">
+                    <img src="images/imgcard.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
                             <i class="icon-views">&#xf06e</i> <span class="views">0</span> <span>Vistas</span> • 18 Mar, 2019 • <span class="commemts">0</span> Comentarios
                         </p>
-                        <p class="blog-section__article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="blog-section__article-btn-in"><a href="#" target="_blank" rel="noopener noreferrer">Continuar leyendo...</a></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Continuar leyendo...</a>
                     </div>
                 </article>
-                <article class="blog-section__article" data-aos="fade-up">
-                    <picture class="blog-section__article-image"></picture>
-                    <div class="blog-section__article-content">
-                        <h3 class="blog-section__article-title">Lorem Ipsum Dolor</h3>
-                        <p class="blog-section__article-comments">
+                <article class="card" data-aos="fade-up">
+                    <img src="images/imgcard.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
                             <i class="icon-views">&#xf06e</i> <span class="views">0</span> <span>Vistas</span> • 18 Mar, 2019 • <span class="commemts">0</span> Comentarios
                         </p>
-                        <p class="blog-section__article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="blog-section__article-btn-in"><a href="#" target="_blank" rel="noopener noreferrer">Continuar leyendo...</a></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Continuar leyendo...</a>
                     </div>
                 </article>
+                
             </section>
         </section>
     </main>

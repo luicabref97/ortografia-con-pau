@@ -19,7 +19,7 @@
     background-color: #FFE8E1;
     padding-bottom: 1.5em;
 }
-#menu {
+/* #menu {
     display: none;
 }
 #menu:checked ~ .sidebar {
@@ -40,7 +40,7 @@
 }
 #menu:checked ~ .nav-bar > .nav-bar__menu-toggle .menu-toggle__label #x {
     display: block;
-}
+} */
 .nav-bar__menu-toggle {
     display: none; /*Esto es mientras se realiza el sidebar correctamente en la visualizacion movil*/
     position: relative;
@@ -57,9 +57,9 @@
 .nav-bar__menu-toggle .btn:active{
     border: none;
 }
-.menu-toggle__label {
+/* .menu-toggle__label {
     cursor: pointer;
-}
+} */
 .menu-toggle__label .fas {
     position: relative;
     color: #F05742;
@@ -81,7 +81,7 @@
     justify-content: space-between;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 2em;
+    padding-bottom: 4em;
 }
 .nav-bar__logo {
     max-height: 200px;
@@ -129,6 +129,7 @@
     list-style-type: none;
     position: absolute;
     padding-left: 0;
+    padding-top: 1em;
 }
 .item-list__services{
     padding: 0.5em;
@@ -176,14 +177,11 @@ a:hover {
     color: #F05742;
     padding: 0.15em;
 }
-
-
 @media (max-width: 1260px) {
     .nav-bar__item-link {
         font-size: 1.3em;
     }
 }
-
 @media (max-width: 1200px) {
     .nav-bar__item-link {
         font-size: 1.2em;
@@ -211,6 +209,7 @@ a:hover {
 /******************************
             SIDEBAR
 *******************************/
+
 .offcanvas.offcanvas-start {
     width: 80%;
 }
@@ -264,6 +263,7 @@ a:hover {
     padding: 1px;
     margin-bottom: 1em;
 }
+
 /******************************
             MAIN INDEX
 *******************************/
@@ -385,6 +385,27 @@ a:hover {
     background-color: #fff;
     padding: 0.5em;
 }
+.card {
+    width: 16rem;
+    max-height: 400px;
+    box-sizing: border-box;
+}
+.card-body {
+    box-sizing: border-box;
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 20%), 0 0 3px rgb(0 0 0 / 40%);
+}
+.card-body .card-text:first-of-type {
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.61);
+}
+.card-body .card-text:last-of-type {
+    height: 50px;
+    overflow: scroll;
+}
+.card-body .card-link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.61);
+}
 .blog-section__articles {
     display: flex;
     flex-wrap: wrap;
@@ -392,48 +413,10 @@ a:hover {
     justify-content: center;
     margin-top: 3em;
 }
-.blog-section__article {
-    margin-bottom: 1em;
-    flex-grow: 1;
-    width: 250px;
-    height: 400px;
-    max-width: 250px;
-    overflow: hidden;
-    display: block;
-    position: relative;
-    color: #fff;
-    box-shadow: 0px 1px 5px rgb(0 0 0 / 20%), 0 0 3px rgb(0 0 0 / 40%);
-    border-radius: 5px;
-}
-.blog-section__article-image {
-    display: block;
-    background-image: url('../images/group1.png');
-    height: 200px;
-    background-size: cover;
-}
-.blog-section__article-content {
-    box-sizing: border-box;
-    padding: 1em;
-    height: 200px;
-    bottom: 0;
-    color: #000;
-    background-color: #fff;
-}
 .icon-views {
     font-family: "Font Awesome 5 Free";
     font-weight: 600;
     font-style: normal;
-}
-.blog-section__article-title {
-    font-size: large;
-}
-.blog-section__article-comments {
-    font-size: x-small;
-    color: rgba(0, 0, 0, 0.61);
-}
-.blog-section__article-btn-in a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.61);
 }
 @media (min-width:320px) and (max-width: 800px) {
     .main-body__about-section {
@@ -509,7 +492,6 @@ a:hover {
     box-sizing: border-box;
     padding: 1em;
     bottom: 0;
-
 }
 .carrousel__points a {
     margin: 2em;
@@ -518,7 +500,6 @@ a:hover {
     font-size: 1.1em;
     font-weight: 600;
     color: #000;
-
 }
 .carrousel__images img {
     width: 100%;
@@ -527,12 +508,14 @@ a:hover {
 
 
 /******************************
-           MAIN BLOG
+            MAIN BLOG
 *******************************/
+
 .main-body__blog-title {
     text-align: center;
     padding: 2em;
 }
+
 /******************************
         MAIN SERVICIOS
 *******************************/
@@ -640,7 +623,6 @@ a:hover {
         justify-content: center;
     }
 }
-
 
 /******************************
         MAIN CONTACTO
@@ -751,7 +733,6 @@ a:hover {
     width: 35%;
     margin-bottom: 20px;
 }
-
 @media (min-width:320px) and (max-width: 800px) {
     .contact-form {
         display: block;
@@ -851,19 +832,11 @@ a:hover {
         flex-direction: row;
     }
 }
-.go-up {
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-}
 .go-up .fas {
     display: none;
     font-size: 3em;
     padding: 0.5em;
     color: darkgray;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    transition: all 0.2s linear;
 }
 .go-up a {
     text-align: end;
