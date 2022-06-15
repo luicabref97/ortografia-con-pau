@@ -386,8 +386,7 @@ a:hover {
     padding: 0.5em;
 }
 .card {
-    width: 16rem;
-    max-height: 400px;
+    width: 250px;
     box-sizing: border-box;
 }
 .card-body {
@@ -399,10 +398,32 @@ a:hover {
     color: rgba(0, 0, 0, 0.61);
 }
 .card-body .card-text:last-of-type {
-    height: 50px;
+    height: 60px;
     overflow: scroll;
 }
+.card-body .card-text:last-of-type::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+}
+.card-body .card-text:last-of-type::-webkit-scrollbar:vertical {
+    width:5px;
+}
+.card-body .card-text:last-of-type::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+.card-body .card-text:last-of-type::-webkit-scrollbar:horizontal {
+    height: 0;
+}
+.card-body .card-text:last-of-type::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+.contenedor::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
 .card-body .card-link {
+    padding-top: 0;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.61);
 }
