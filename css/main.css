@@ -123,16 +123,25 @@
 }
 .nav-bar__item-list {
     display: none;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0.5em;
+    text-align: left;
+    background-color: #ffc1ae;
+    border-radius: 5px;
 }
 .nav-bar__item:hover .nav-bar__item-list {
-    display: block;
-    list-style-type: none;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    padding-left: 0;
-    padding-top: 1em;
 }
 .item-list__services{
-    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: solid 1px #FFE8E1;
+    background-color: #ffc1ae;
 }
 .item-list__services a{
     text-decoration: none;
@@ -295,9 +304,10 @@ a:hover {
     display: flex;
     justify-content: space-around;
     gap: 1em;
+    flex-wrap: wrap;
 }
 .services-section__service {
-    max-width: 200px;
+    max-width: 220px;
 }
 .service__img {
     display: flex;
@@ -332,14 +342,14 @@ a:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 .services-btn a {
     text-align: center;
     width: 250px;
     padding: 0.8em;
     background-color: #F05742;
-    color: #FFE8E1;
+    color: #fff;
     font-weight: bold;
     border-radius: 10px;
     text-decoration: none;
@@ -463,13 +473,16 @@ a:hover {
         MAIN SOBRE MI
 *******************************/
 
-.main-body__about-image img {
-    width: 100%;
+.main-body__about-title {
+    text-align: center;
+    padding: 2em;
+}
+.main-body__about-content {
+    background-color: #FFE8E1;
 }
 .main-body__about-text {
-    background-color: #FFE8E1;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -559,11 +572,13 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     flex: 1 1 50%;
+    max-width: 400px;
 }
 .service__image2 {
     display: flex;
     justify-content: flex-start;
     flex: 1 1 50%;
+    max-width: 400px;
 }
 .service__image1-3 img, .service__image2 img {
     width: 100%;
@@ -573,16 +588,22 @@ a:hover {
     display: flex;
     flex-direction: column;
     padding: 0 2em 0 0;
-    gap: 3em;
+    gap: 1em;
     height: 100%;
 }
 #service__content2 {
     padding: 0 0 0 2em;
 }
-#service__content2 .service__tittle-description, #service__content2 .service__texto {
+#service__content4 {
+    padding: 0 0 0 2em;
+}
+#service__content2 .service__tittle-description {
     display: flex;
+}
+#service__content2 .service__texto  {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    text-align: end;
 }
 .service__tittle-description {
     display: flex;
@@ -594,6 +615,11 @@ a:hover {
     border-right: solid 2px #000;
 }
 #servicio2 {
+    padding: 0 0 0 1em;
+    border-left: solid 2px #000;
+    border-right: 0;
+}
+#servicio4 {
     padding: 0 0 0 1em;
     border-left: solid 2px #000;
     border-right: 0;
@@ -614,8 +640,12 @@ a:hover {
         width: 100%;
         padding: 0;
     }
+    #service__content4 {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
     .service__texto {
-        text-align: center;
         padding-top: 1em;
     }
     .service__title {
@@ -623,13 +653,15 @@ a:hover {
     }
     #service__content2 .service__texto {
         padding-top: 1em;
-        text-align: center;
+    }
+    #service__content4 .service__texto {
+        padding-top: 1em;
     }
     #service__content2 .service__tittle-description {
         padding-top: 2em;
         justify-content: center;
     }
-    .service__tittle-description #servicio2 {
+    .service__tittle-description #servicio2, .service__tittle-description #servicio4  {
         order: -1;
         border-left: 0;
         border-right: solid 2px #000;
