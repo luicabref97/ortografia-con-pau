@@ -42,11 +42,11 @@
     display: block;
 } */
 .nav-bar__menu-toggle {
-    display: none; /*Esto es mientras se realiza el sidebar correctamente en la visualizacion movil*/
+    display: none;
     position: relative;
     padding-top: 8px;
 }
-.nav-bar__menu-toggle .btn{
+.nav-bar__menu-toggle .btn {
     padding: 0;
     color: #F05742;
     background-color: transparent;
@@ -54,12 +54,12 @@
     font-size: 2.3em;
     padding-top: 8px;
 }
-.nav-bar__menu-toggle .btn:active{
+.nav-bar__menu-toggle .btn:active {
     border: none;
 }
 /* .menu-toggle__label {
     cursor: pointer;
-} */
+}
 .menu-toggle__label .fas {
     position: relative;
     color: #F05742;
@@ -68,6 +68,7 @@
     font-weight: 600;
     padding: 0.2em;
 }
+ */
 
 /******************************
             NAV BAR
@@ -86,6 +87,8 @@
 .nav-bar__logo {
     max-height: 200px;
     max-width: 200px;
+    min-height: 130px;
+    min-width: 130px;
 }
 .nav-bar__list {
     display: flex;
@@ -135,7 +138,7 @@
     flex-direction: column;
     position: absolute;
 }
-.item-list__services{
+.item-list__services {
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.5em;
@@ -203,15 +206,13 @@ a:hover {
     .nav-bar__logo {
         max-height: 130px;
         max-width: 130px;
+        margin: 0;
     }
     .nav-bar__list {
         display: none;
     }
     .nav-bar__icon-contact {
         display: block;
-    }
-    .nav-bar__logo {
-        margin: 0;
     }
 }
 
