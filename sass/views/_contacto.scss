@@ -1,0 +1,147 @@
+/******************************
+        MAIN CONTACTO
+*******************************/
+
+.main-body__contact-header {
+    text-align: center;
+    padding: 2em;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.contact-form {
+    background-color: #FFE8E1;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: grid;
+    grid-template-areas: 
+        "nombre email"
+        "ayuda ayuda"
+        "enviar enviar";
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4em;
+    grid-row-gap: 1em;
+
+    .contact-form__name {
+        grid-area: nombre;
+
+        input {
+            display: block;
+            width: 100%;
+            margin-top: 0.8em;
+            padding: 0.8em;
+            border-color: #000;
+            border-radius: 5px
+        }
+    }
+    .contact-form__email {
+        grid-area: email;
+
+        input {
+            display: block;
+            width: 100%;
+            margin-top: 0.8em;
+            padding: 0.8em;
+            border-color: #000;
+            border-radius: 5px
+        }
+    }
+    .contact-form__message {
+        grid-area: ayuda;
+
+        textarea {
+            display: block;
+            width: 100%;
+            margin-top: 0.8em;
+            resize: vertical;
+            min-height: 160px;
+            padding: 0.8em;
+            border-color: #000;
+            border-radius: 5px
+        }
+    }
+    .contact-form__submit {
+        grid-area: enviar;
+
+        input {
+            width: 100%;
+            margin-top: 1em;
+            padding: 0.8em;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #F05742;
+            color: #FFE8E1;
+            border-radius: 5px;
+            text-decoration: none;
+
+            &:hover {
+                box-shadow: 0px 1px 3px #00000033, 0 0 1.5px #00000066;
+            }
+        }
+    }
+}
+.main-body__contact-social {
+    background-color: #FFE8E1;
+    padding-bottom: 40px;
+
+    .main-body__contact-division {
+        display: block;
+        background-color: #000;
+        height: 2px;
+        margin: 0 auto;
+        width: 35%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-social {
+        display: flex;
+        justify-content: center;
+
+        &__icon, &__email {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2em;
+
+            .fab, .fas {
+                font-size: 2.3em;
+                color: #F05742;
+                padding: 0.3em;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}
+
+@media (min-width:320px) and (max-width: 800px) {
+    .contact-form {
+        display: block;
+        padding-left: 20%;
+        padding-right: 20%;
+        
+        .contact-form__email {
+            padding-top: 1em;
+        }
+        .contact-form__message {
+            padding-top: 1em;
+        }
+        .contact-form__submit {
+            padding-top: 1em;
+        }
+    }
+
+    .main-body__contact-social {
+
+        .contact-social {
+            flex-direction: column;
+            width: 30%;
+            margin: auto;
+        }
+    }
+}

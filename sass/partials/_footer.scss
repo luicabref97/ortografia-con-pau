@@ -1,0 +1,102 @@
+/******************************
+            FOOTER
+*******************************/
+
+.footer {
+    display: flex;
+    background-color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2em;
+    margin-top: 24px;
+
+    &__logo {
+        max-width: 250px;
+        max-height: 250px;
+        margin-top: 40px;
+    }
+
+    &__suscribe {
+        width: 33.33%;
+
+        .footer__suscribe-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            label {
+                display: block;
+                padding-top: 0.7em;
+                width: 100%;
+            }
+
+            input{
+                display: block;
+                margin-top: 0.8em;
+                padding: 0.5em;
+                width: 100%;
+            }
+
+            #suscribe-btn {
+                background-color: #F05742;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0px 1px 2px #00000033, 0 0 1.5px #00000066;
+                }
+            }
+        }
+    }
+
+    .fab {
+    font-size: 2.3em;
+    color: #F05742;
+    padding: 0.3em;
+    }
+
+}
+
+@media (max-width:930px) {
+
+    .footer .footer__social-contact {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width:320px) and (max-width: 800px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+
+        .footer__social-contact {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .footer__suscribe {
+            width: 80%;
+        }
+    }
+}
+
+.go-up .fas {
+    display: none;
+    font-size: 3em;
+    padding: 0.5em;
+    color: darkgray;
+}
+.go-up a {
+    text-align: end;
+    text-decoration: none;
+}
+@media (min-width:320px) and (max-width: 800px) {
+    .go-up .fas {
+        display: block;
+    }
+}
