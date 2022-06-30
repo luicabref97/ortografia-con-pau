@@ -53,18 +53,19 @@
 }
 
 @media (min-width:320px) and (max-width: 800px) {
-    .main-body__about-content {
-        display: block;
-    }
-    .main-body__about-img {
-        width: 100%;
-        padding-top: $spacing-medium;
-        padding-bottom: $spacing-medium;
-    }
-    .main-body__about-text {
-        width: 100%;
-        padding-top: $spacing-medium;
-        padding-bottom: $spacing-large;
-    }
     
+    .main-body__about .main-body__about-content {
+        display: block;
+
+        .main-body__about-img {
+            width: 100%;
+            padding-top: $spacing-medium;
+            padding-bottom: $spacing-medium;
+        }
+        .main-body__about-text {
+            width: 100%;
+            padding-top: $spacing-medium;
+            padding-bottom: $spacing-large;
+        }
+    }
 }
