@@ -38,6 +38,16 @@ img {
   display: none;
   color: transparent; }
 
+/*@mixin flex($dir, $jus, $alg, $wrap) {
+    display: flex;
+    @if $dir == default {flex-direction: row;} 
+    @else {flex-direction: $dir;}
+    @if $jus == default {justify-content: flex-start;} 
+    @else {justify-content: $jus;}
+    @if $alg == default {align-items: stretch;} 
+    @else {align-items: $alg;}
+    @if $wrap == default {flex-wrap: nowrap;} 
+    @else {flex-wrap: $wrap;}}*/
 /******************************
             PARTIALS
 *******************************/
@@ -51,14 +61,14 @@ img {
             NAV BAR
 *******************************/ }
   .main-header .nav-bar {
-    width: 100%;
     display: flex;
-    padding-top: 75px;
-    position: relative;
+    flex-direction: row;
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 6rem; }
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 75px 10% 6rem 10%;
+    position: relative; }
     .main-header .nav-bar__menu-toggle {
       display: none;
       position: relative;
@@ -78,7 +88,10 @@ img {
       min-width: 130px; }
     .main-header .nav-bar__list {
       display: flex;
-      align-items: center; }
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 0; }
       .main-header .nav-bar__list .nav-bar__item {
         text-align: center;
         padding: 0.5em 2rem;
@@ -106,10 +119,13 @@ img {
             transition: 0.6s; }
         .main-header .nav-bar__list .nav-bar__item .nav-bar__item-link {
           display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 0.3em;
           color: #000;
           font-size: 2.4em;
-          text-align: center;
-          gap: 0.3em; }
+          text-align: center; }
         .main-header .nav-bar__list .nav-bar__item .nav-bar__item-list {
           display: none;
           list-style-type: none;
@@ -119,10 +135,7 @@ img {
           background-color: #ffc1ae;
           border-radius: 5px; }
           .main-header .nav-bar__list .nav-bar__item .nav-bar__item-list .item-list__services {
-            padding-left: 1em;
-            padding-right: 1em;
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
+            padding: 0.5em 1em 0.5em 1em;
             border: solid 1px #ffe8e1;
             background-color: #ffc1ae; }
             .main-header .nav-bar__list .nav-bar__item .nav-bar__item-list .item-list__services a {
@@ -134,6 +147,9 @@ img {
         .main-header .nav-bar__list .nav-bar__item:hover .nav-bar__item-list {
           display: flex;
           flex-direction: column;
+          justify-content: start;
+          align-items: stretch;
+          gap: 0;
           position: absolute; }
       .main-header .nav-bar__list #nav-bar__item-contact {
         background-color: #f05742;
@@ -146,11 +162,13 @@ img {
       display: none;
       padding-top: 2rem; }
       .main-header .nav-bar__icon-contact .fas, .main-header .nav-bar__icon-contact a {
-        text-align: center;
-        text-decoration: none;
         display: flex;
-        font-family: "Font Awesome 5 Free";
+        flex-direction: row;
         justify-content: center;
+        align-items: stretch;
+        gap: 0;
+        text-align: center;
+        font-family: "Font Awesome 5 Free";
         font-size: 1.92em;
         font-weight: 600;
         color: #f05742; }
@@ -220,16 +238,18 @@ img {
 *******************************/
 .footer {
   display: flex;
-  background-color: #fff;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  gap: 0;
+  background-color: #fff;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 2.4rem;
   margin-top: 2.4rem; }
   .footer__logo {
-    max-width: 230px;
     max-height: 230px;
+    max-width: 230px;
     margin-top: 2.4rem; }
   .footer__suscribe {
     width: 33.33%; }
@@ -240,7 +260,8 @@ img {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      gap: 0; }
       .footer__suscribe .footer__suscribe-form label {
         display: block;
         padding-top: 1rem;
@@ -269,16 +290,24 @@ img {
 @media (max-width: 930px) {
   .footer .footer__social-contact {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0; } }
 
 @media (min-width: 320px) and (max-width: 800px) {
   .footer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2.4rem; }
     .footer .footer__social-contact {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0; }
     .footer .footer__suscribe {
       width: 70%; } }
 
@@ -469,7 +498,7 @@ img {
             MAIN BLOG
 *******************************/
 .main-body__blog .main-body__blog-title {
-  font-size: 5.2em;
+  font-size: 3.6em;
   font-family: "Nunito", sans-serif;
   text-align: center;
   padding: 6rem; }
@@ -567,10 +596,6 @@ img {
         MAIN CONTACTO
 *******************************/
 .main-body__contact-header {
-  font-size: 3.6em;
-  font-family: "Nunito", sans-serif;
-  text-align: center;
-  padding: 6rem;
   padding-left: 10%;
   padding-right: 10%; }
 
@@ -677,12 +702,6 @@ img {
 /******************************
         MAIN SERVICIOS
 *******************************/
-.main-body__services-title {
-  font-size: 5.2em;
-  font-family: "Nunito", sans-serif;
-  text-align: center;
-  padding: 6rem; }
-
 .services {
   background-color: #ffe8e1;
   padding-left: 10%;
@@ -784,8 +803,8 @@ img {
 /******************************
         MAIN SOBRE MI
 *******************************/
-.main-body__about-title {
-  font-size: 5.2em;
+.main-body__about-title, .main-body__contact-header, .main-body__services-title {
+  font-size: 3.6em;
   font-family: "Nunito", sans-serif;
   text-align: center;
   padding: 6rem; }

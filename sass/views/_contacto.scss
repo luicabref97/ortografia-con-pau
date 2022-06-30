@@ -3,10 +3,7 @@
 *******************************/
 
 .main-body__contact-header {
-    font-size: $text-medium*1.5;
-    font-family: $font-title;
-    text-align: center;
-    padding: $spacing-large;
+    @extend .main-body__about-title;
     padding-left: 10%;
     padding-right: 10%;
 }

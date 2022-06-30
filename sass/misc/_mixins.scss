@@ -1,0 +1,30 @@
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+@mixin max-sizes($width, $height) {
+    max-height: $height;
+    max-width: $width;
+}
+@mixin min-sizes($width, $height) {
+    min-height: $height;
+    min-width: $width;
+}
+@mixin flex($dir, $jus, $alg, $gap) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $alg;
+    gap: $gap;
+}
+
+/*@mixin flex($dir, $jus, $alg, $wrap) {
+    display: flex;
+    @if $dir == default {flex-direction: row;} 
+    @else {flex-direction: $dir;}
+    @if $jus == default {justify-content: flex-start;} 
+    @else {justify-content: $jus;}
+    @if $alg == default {align-items: stretch;} 
+    @else {align-items: $alg;}
+    @if $wrap == default {flex-wrap: nowrap;} 
+    @else {flex-wrap: $wrap;}}*/

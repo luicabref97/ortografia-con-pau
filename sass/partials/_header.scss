@@ -11,14 +11,10 @@
 *******************************/
 
     .nav-bar {
+        @include flex(row, space-between, center, 0);
         width: 100%;
-        display: flex;
-        padding-top: 75px;
+        padding: 75px 10% $spacing-large 10%;
         position: relative;
-        justify-content: space-between;
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-bottom: $spacing-large;
 
         &__menu-toggle {
             display: none;
@@ -37,14 +33,11 @@
             }
         }
         &__logo {
-            max-height: 200px;
-            max-width: 200px;
-            min-height: 130px;
-            min-width: 130px;
+            @include max-sizes(200px, 200px);
+            @include min-sizes(130px, 130px);
         }
         &__list {
-            display: flex;
-            align-items: center;
+            @include flex(row, start, center, 0);
 
             .nav-bar__item {
                 text-align: center;
@@ -79,11 +72,10 @@
                 }
 
                 .nav-bar__item-link {
-                    display: flex;
+                    @include flex(row, center, center, 0.3em);
                     color: $text-color;
                     font-size: $text-medium;
                     text-align: center;
-                    gap: 0.3em;
                 }
 
                 .nav-bar__item-list {
@@ -96,10 +88,7 @@
                     border-radius: 5px;
 
                     .item-list__services {
-                        padding-left: 1em;
-                        padding-right: 1em;
-                        padding-top: 0.5em;
-                        padding-bottom: 0.5em;
+                        padding: 0.5em 1em 0.5em 1em;
                         border: solid 1px $secondary;
                         background-color: $alternative;
 
@@ -116,8 +105,7 @@
                 }
 
                 &:hover .nav-bar__item-list {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex(column, start, stretch, 0);
                     position: absolute;
                 }
             }
@@ -138,11 +126,9 @@
             padding-top: $spacing-small;
 
             .fas, a {
+                @include flex(row, center, stretch, 0);
                 text-align: center;
-                text-decoration: none;
-                display: flex;
                 font-family: "Font Awesome 5 Free";
-                justify-content: center;
                 font-size: $text-base*1.2;
                 font-weight: 600;
                 color: $primary;

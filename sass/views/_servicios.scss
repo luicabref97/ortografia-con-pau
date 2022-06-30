@@ -3,10 +3,7 @@
 *******************************/
 
 .main-body__services-title {
-    font-size: $text-large;
-    font-family: $font-title;
-    text-align: center;
-    padding: $spacing-large;
+    @extend .main-body__about-title;
 }
 .services {
     background-color: $secondary;
