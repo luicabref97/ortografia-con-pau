@@ -4,22 +4,27 @@
 
 .footer {
     display: flex;
-    background-color: #fff;
+    background-color: $base;
     justify-content: space-around;
     align-items: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 2em;
-    margin-top: 24px;
+    margin-bottom: $spacing-medium;
+    margin-top: $spacing-medium;
 
     &__logo {
-        max-width: 250px;
-        max-height: 250px;
-        margin-top: 40px;
+        max-width: 230px;
+        max-height: 230px;
+        margin-top: $spacing-medium;
     }
 
     &__suscribe {
         width: 33.33%;
+
+        .footer__suscribe-header {
+            font-family: $font-title;
+            font-size: $text-medium;
+        }
 
         .footer__suscribe-form {
             display: flex;
@@ -29,22 +34,26 @@
 
             label {
                 display: block;
-                padding-top: 0.7em;
+                padding-top: $spacing-xsmall;
                 width: 100%;
+                font-size: $text-base;
             }
 
             input{
                 display: block;
-                margin-top: 0.8em;
-                padding: 0.5em;
+                margin-top: $spacing-xsmall;
+                padding: $spacing-xsmall;
                 width: 100%;
+                font-size: $text-small;
             }
 
             #suscribe-btn {
-                background-color: #F05742;
-                color: #fff;
+                background-color: $primary;
+                color: $base;
                 border-radius: 5px;
                 cursor: pointer;
+                font-family: $font-title;
+                font-size: $text-base;
 
                 &:hover {
                     box-shadow: 0px 1px 2px #00000033, 0 0 1.5px #00000066;
@@ -54,9 +63,9 @@
     }
 
     .fab {
-    font-size: 2.3em;
-    color: #F05742;
-    padding: 0.3em;
+        font-size: $text-medium*1.5;
+        color: $primary;
+        padding: 0.3em;
     }
 
 }
@@ -72,7 +81,7 @@
     .footer {
         display: flex;
         flex-direction: column;
-        gap: 3em;
+        gap: $spacing-medium;
 
         .footer__social-contact {
             display: flex;
@@ -80,20 +89,19 @@
         }
 
         .footer__suscribe {
-            width: 80%;
+            width: 70%;
         }
     }
 }
 
 .go-up .fas {
     display: none;
-    font-size: 3em;
-    padding: 0.5em;
+    font-size: $text-large;
+    padding:$spacing-small;
     color: darkgray;
 }
 .go-up a {
     text-align: end;
-    text-decoration: none;
 }
 @media (min-width:320px) and (max-width: 800px) {
     .go-up .fas {

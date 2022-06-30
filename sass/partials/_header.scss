@@ -3,8 +3,8 @@
 *******************************/
 
 .main-header {
-    background-color: #FFE8E1;
-    padding-bottom: 1.5em;
+    background-color: $secondary;
+    padding-bottom: $spacing-medium;
 
 /******************************
             NAV BAR
@@ -18,20 +18,19 @@
         justify-content: space-between;
         padding-left: 10%;
         padding-right: 10%;
-        padding-bottom: 4em;
+        padding-bottom: $spacing-large;
 
         &__menu-toggle {
-            display: none; 
+            display: none;
             position: relative;
-            padding-top: 8px;
+            padding-top: $spacing-xsmall*1.1;
 
             .btn {
                 padding: 0;
-                color: #F05742;
+                color: $primary;
                 background-color: transparent;
                 border: none;
-                font-size: 2.3em;
-                padding-top: 8px;
+                font-size: $text-base*2;
             }
             .btn:active {
                 border: none;
@@ -45,15 +44,14 @@
         }
         &__list {
             display: flex;
-            list-style-type: none;
             align-items: center;
 
             .nav-bar__item {
                 text-align: center;
-                padding: 0.5em 1em;
+                padding: 0.5em $spacing-small;
                 margin-top: 0.5em;
                 margin-bottom: 0.5em;
-                background-image: linear-gradient(#000, #000);
+                background-image: linear-gradient($text-color, $text-color);
                 background-position: 0% 100%;
                 background-repeat: no-repeat;
                 background-size: 0% 2px;
@@ -62,7 +60,7 @@
 
                 .fas {
                     position: relative;
-                    color: black;
+                    color: $text-color;
                     font-family: "Font Awesome 5 Free";
                     align-self: center;
                 }
@@ -82,9 +80,8 @@
 
                 .nav-bar__item-link {
                     display: flex;
-                    text-decoration: none;
-                    color: #000;
-                    font-size: 1.5em;
+                    color: $text-color;
+                    font-size: $text-medium;
                     text-align: center;
                     gap: 0.3em;
                 }
@@ -95,7 +92,7 @@
                     padding-left: 0;
                     margin-top: 0.5em;
                     text-align: left;
-                    background-color: #ffc1ae;
+                    background-color: $alternative;
                     border-radius: 5px;
 
                     .item-list__services {
@@ -103,12 +100,12 @@
                         padding-right: 1em;
                         padding-top: 0.5em;
                         padding-bottom: 0.5em;
-                        border: solid 1px #FFE8E1;
-                        background-color: #ffc1ae;
+                        border: solid 1px $secondary;
+                        background-color: $alternative;
 
                         a {
-                            text-decoration: none;
-                            color: #000;
+                            color: $text-color;
+                            font-size: $text-small*1.2;
                         }
 
                         &:hover {
@@ -126,19 +123,19 @@
             }
 
             #nav-bar__item-contact {
-                background-color: #F05742;
+                background-color: $primary;
                 background-image: none;
-                border-radius: 10px;
+                border-radius: 1rem;
                 box-shadow: 0px 1px 5px #00000033, 0 0 3px #00000066;
 
                 .nav-bar__item-link {
-                    color: #fff;
+                    color: $base;
                 }
             }
         }
         &__icon-contact {
             display: none;
-            padding-top: 16px;
+            padding-top: $spacing-small;
 
             .fas, a {
                 text-align: center;
@@ -146,23 +143,20 @@
                 display: flex;
                 font-family: "Font Awesome 5 Free";
                 justify-content: center;
-                font-size: 1.5em;
+                font-size: $text-base*1.2;
                 font-weight: 600;
-                color: #F05742;
-                padding: 0.15em;
+                color: $primary;
             }
         }
     }
 }
 
-@media (max-width: 1260px) {
-    .main-header .nav-bar__list .nav-bar__item .nav-bar__item-link {
-        font-size: 1.3em;
-    }
-}
 @media (max-width: 1200px) {
+    .main-header .nav-bar__list .nav-bar__item {
+        padding: 0.5em $spacing-xsmall;
+    }
     .main-header .nav-bar__list .nav-bar__item .nav-bar__item-link {
-        font-size: 1.2em;
+        font-size: $text-medium;
     }
 }
 @media (min-width:320px) and (max-width: 800px) {
@@ -190,57 +184,53 @@
     width: 80%;
 
     .btn-close {
-        background-color: #FFE8E1;
+        background-color: $secondary;
+        font-size: $text-medium;
     }
 
     .sidebar__list {
-        padding-top: 50px;
-        padding-bottom: 200px;
-        padding-left: 40px;
-        padding-right: 40px;
-        list-style-type: none;
+        padding-top: $spacing-large ;
+        padding-bottom: $spacing-large*3;
+        padding-left: $spacing-medium;
+        padding-right: $spacing-medium;
 
         .sidebar__item {
-            padding-top: 1.2em;
-            padding-bottom: 0.5em;
+            padding-top: $spacing-xsmall;
+            padding-bottom: $spacing-xsmall;
 
             .sidebar__item-link {
-                font-size: x-large;
-                text-decoration: none;
-                color: #FFE8E1;
+                font-size: $text-medium;
+                color: $secondary;
             }
         }
     }
 
     .sidebar__contact {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 50px;
+        padding-left: $spacing-medium;
+        padding-right: $spacing-medium;
 
         .sidebar__division-line {
-            background-color: #FFE8E1;
+            background-color: $secondary;
             padding: 1px;
             margin-bottom: 1em;
         }
 
         &-mail {
-            color: #FFE8E1;
-            font-size: x-large;
+            color: $secondary;
+            font-size: $text-medium;
             margin-bottom: 0;
-            text-decoration: none;
         }
 
         .sidebar__social-list {
             display: flex;
-            list-style-type: none;
             padding-left: 0;
 
             .sidebar__social-icon {
-                font-size: xx-large;
+                font-size: $text-medium*1.5;
 
                 .fab {
-                    color: #FFE8E1;
-                    padding-right: 0.5em;
+                    color: $secondary;
+                    padding-right: $spacing-small;
                 }
             }
         }
@@ -248,5 +238,5 @@
 }
 
 .offcanvas {
-    background-color: #F05742;
+    background-color: $primary;
 }

@@ -3,17 +3,19 @@
 *******************************/
 
 .main-body__contact-header {
+    font-size: $text-medium*1.5;
+    font-family: $font-title;
     text-align: center;
-    padding: 2em;
+    padding: $spacing-large;
     padding-left: 10%;
     padding-right: 10%;
 }
 .contact-form {
-    background-color: #FFE8E1;
+    background-color: $secondary;
     padding-left: 25%;
     padding-right: 25%;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: $spacing-large;
+    padding-bottom: $spacing-large;
     display: grid;
     grid-template-areas: 
         "nombre email"
@@ -25,39 +27,42 @@
 
     .contact-form__name {
         grid-area: nombre;
+        font-size: $spacing-small;
 
         input {
             display: block;
             width: 100%;
-            margin-top: 0.8em;
-            padding: 0.8em;
-            border-color: #000;
+            margin-top: $spacing-xsmall;
+            padding: $spacing-xsmall;
+            border-color: $text-color;
             border-radius: 5px
         }
     }
     .contact-form__email {
         grid-area: email;
+        font-size: $spacing-small;
 
         input {
             display: block;
             width: 100%;
-            margin-top: 0.8em;
-            padding: 0.8em;
-            border-color: #000;
+            margin-top: $spacing-xsmall;
+            padding: $spacing-xsmall;
+            border-color: $text-color;
             border-radius: 5px
         }
     }
     .contact-form__message {
         grid-area: ayuda;
+        font-size: $spacing-small;
 
         textarea {
             display: block;
             width: 100%;
-            margin-top: 0.8em;
+            margin-top: $spacing-xsmall;
             resize: vertical;
             min-height: 160px;
-            padding: 0.8em;
-            border-color: #000;
+            padding: $spacing-xsmall;
+            border-color: $text-color;
             border-radius: 5px
         }
     }
@@ -66,15 +71,14 @@
 
         input {
             width: 100%;
-            margin-top: 1em;
-            padding: 0.8em;
-            font-weight: bold;
-            font-size: 1em;
+            margin-top: $spacing-xsmall;
+            padding: $spacing-xsmall;
+            font-size: $text-base;
+            font-family: $font-title;
             cursor: pointer;
-            background-color: #F05742;
-            color: #FFE8E1;
+            background-color: $primary;
+            color: $base;
             border-radius: 5px;
-            text-decoration: none;
 
             &:hover {
                 box-shadow: 0px 1px 3px #00000033, 0 0 1.5px #00000066;
@@ -83,16 +87,16 @@
     }
 }
 .main-body__contact-social {
-    background-color: #FFE8E1;
-    padding-bottom: 40px;
+    background-color: $secondary;
+    padding-bottom: $spacing-large;
 
     .main-body__contact-division {
         display: block;
-        background-color: #000;
+        background-color: $text-color;
         height: 2px;
         margin: 0 auto;
         width: 35%;
-        margin-bottom: 20px;
+        margin-bottom: 20px
     }
     
     .contact-social {
@@ -103,17 +107,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0 2em;
+            padding: 0 $spacing-medium;
 
             .fab, .fas {
-                font-size: 2.3em;
-                color: #F05742;
+                font-size: $text-medium*1.5;
+                color: $primary;
                 padding: 0.3em;
             }
 
             a {
-                text-decoration: none;
-                color: #000;
+                color: $text-color;
+                font-size: $text-base;
             }
         }
     }

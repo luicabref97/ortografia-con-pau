@@ -3,21 +3,20 @@
 *******************************/
 
 .main-body__about-section {
-    background-color: #FFE8E1;
-    padding-bottom: 50px;
+    background-color: $secondary;
+    padding-bottom: $spacing-large;
     padding-left: 40%;
     padding-right: 10%;
 
     p {
-        font-size: 2em;
+        font-size: $text-medium*1.2;
         text-align: right;
         line-height: normal;
 
         a {
             display: block;
-            font-size: 0.8em;
             text-decoration: underline;
-            color: #000;
+            color: $text-color;
         }
     }
 }
@@ -25,12 +24,12 @@
 .main-body__services-section {
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 40px;
+    margin-top: $spacing-large;
 
     .services-section {
         display: flex;
         justify-content: space-around;
-        gap: 1em;
+        gap: $spacing-small;
         flex-wrap: wrap;
 
         &__service {
@@ -42,7 +41,6 @@
                 justify-content: center;
 
                 img {
-                    width: 100%;
                     max-width: 150px;
                 }
             }
@@ -50,21 +48,24 @@
                 max-width: 350px;
 
                 h2 {
-                    font-size: x-large;
+                    font-family: $font-title;
+                    font-size: $text-medium;
                     text-align: center;
-                    padding-top: 0.5em;
+                    padding-top: $spacing-small;
                 }
                 h3 {
-                    font-size: large;
+                    font-family: $font-title;
+                    font-size: $text-base;
                     font-weight: 400;
-                    color: rgba(0, 0, 0, 0.61);
+                    color: rgba(0, 0, 0, 0.60);
                     text-align: center;
-                    padding-top: 0.5em;
+                    padding-top: $spacing-xsmall;
                 }
                 p {
+                    font-size: $text-small;
                     text-align: center;
-                    padding-top: 0.5em;
-                    padding-bottom: 1em;
+                    padding-top: $spacing-xsmall;
+                    padding-top: $spacing-xsmall;
                 }
             }
         }
@@ -72,63 +73,65 @@
     .services-btn {
         display: flex;
         justify-content: center;
-        margin-bottom: 2em;
-        margin-top: 1em;
+        margin-bottom: $spacing-large;
+        margin-top: $spacing-medium;
 
         a {
+            font-family: $font-title;
+            font-size: $text-medium;
             text-align: center;
             width: 250px;
-            padding: 0.8em;
-            background-color: #F05742;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 10px;
-            text-decoration: none;
-            box-shadow: 0px 1px 5px #00000033, 0px 0px 3px #00000066;
+            padding: $spacing-xsmall;
+            background-color: $primary;
+            color: $base;
+            font-weight: 400;
+            border-radius: 1rem;
+            box-shadow: 0px 1px 5px #00000033, 0 0 3px #00000066;
         }
     }
 }
 
 .main-body__blog-section {
-    background-color: #FFE8E1;
+    background-color: $secondary;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 30px;
-    padding: 3em;
+    border-radius: 3rem;
+    padding: $spacing-large;
 
     h1 {
         text-align: center;
-        font-size: xx-large;
+        font-family: $font-title;
+        font-size: $text-medium;
     }
 
     .blog-section__form {
         display: flex;
-        margin-bottom: 2em;
-        margin-top: 2em;
+        margin-top: $spacing-medium;
         justify-content: center;
 
         .form__search {
+            font-size: $text-small;
             width: 60%;
-            padding: 0.5em;
+            padding: $spacing-xsmall;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
-            border-top: solid 2px #000;
-            border-bottom: solid 2px #000;
-            border-left: solid 2px #000;
+            border-top: solid 2px $text-color;
+            border-bottom: solid 2px $text-color;
+            border-left: solid 2px $text-color;
         }
         .form__submit {
             font-family: "Font Awesome 5 Free";
-            font-size: 1.1em;
+            font-size: $text-small;
             font-weight: 600;
             border-left: none;
-            border-top: solid 2px #000;
-            border-bottom: solid 2px #000;
-            border-right: solid 2px #000;
+            border-top: solid 2px $text-color;
+            border-bottom: solid 2px $text-color;
+            border-right: solid 2px $text-color;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             cursor: pointer;
-            background-color: #fff;
-            padding: 0.5em;
+            background-color: $base;
+            padding:  $spacing-xsmall;
         }
     }
 }
@@ -136,23 +139,25 @@
 .blog-section__articles {
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: $spacing-small;
     justify-content: center;
-    margin-top: 3em;
+    margin-top: $spacing-medium;
 
     .card {
         width: 250px;
-        box-sizing: border-box;
     
         .card-body {
-            box-sizing: border-box;
             box-shadow: 0px 1px 5px #00000033, 0 0 3px #00000066;
     
+            .card-title{
+                font-size: $text-small*1.2;
+                font-family: $font-title;
+            }
             .card-text:first-of-type {
-                font-size: 0.7em;
-                color: rgba(0, 0, 0, 0.61);
+                color: rgba(0, 0, 0, 0.60);
             }
             .card-text:last-of-type {
+                font-size: $text-small;
                 height: 60px;
                 overflow: scroll;
             }
@@ -163,9 +168,15 @@
             .card-text:last-of-type::-webkit-scrollbar:vertical {
                 width:5px;
             }
-            .card-text:last-of-type::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+            .card-text:last-of-type::-webkit-scrollbar-button:increment {
                 display: none;
-            } 
+            }
+            .contenedor::-webkit-scrollbar-button {
+                display: none;
+            }
+            .contenedor::-webkit-scrollbar-track {
+                border-radius: 1rem;  
+            }
             .card-text:last-of-type::-webkit-scrollbar:horizontal {
                 height: 0;
             }
@@ -175,16 +186,11 @@
                 border: 2px solid #f1f2f3;
             }
             .card-link {
-                padding-top: 0;
-                text-decoration: none;
-                color: rgba(0, 0, 0, 0.61);
+                font-size: $text-small;
+                color: rgba(0, 0, 0, 0.60);
             }
         }
     }
-}
-
-.contenedor::-webkit-scrollbar-track {
-    border-radius: 10px;  
 }
 
 .icon-views {
@@ -200,14 +206,14 @@
 
         p {
             text-align: center;
-            font-size: 1.7em;
+            font-size: $text-medium;
         }
     } 
     .main-body__services-section .services-section {
         flex-wrap: wrap;
     }
     .main-body__blog-section {
-        background-color: #FFE8E1;
+        background-color: $secondary;
         margin-left: 0;
         margin-right: 0;
         border-radius: 0;

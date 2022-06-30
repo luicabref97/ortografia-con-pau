@@ -3,66 +3,67 @@
 *******************************/
 
 .main-body__services-title {
+    font-size: $text-large;
+    font-family: $font-title;
     text-align: center;
-    padding: 2em;
+    padding: $spacing-large;
 }
 .services {
-    background-color: #FFE8E1;
+    background-color: $secondary;
     padding-left: 10%;
     padding-right: 10%;
     
     .service {
         display: flex;
         align-items: center;
-        padding: 2em;
+        padding: $spacing-medium;
 
-        &__content {
+        .service__content {
             flex: 1 1 50%;
             display: flex;
             flex-direction: column;
-            padding: 0 2em 0 0;
-            gap: 1em;
+            padding: 0 $spacing-medium 0 0;
+            gap: $spacing-small;
             height: 100%;
 
             .service__tittle-description {
                 display: flex;
                 align-items: center;
-                gap: 2em;
+                gap: $spacing-medium;
+                font-size: $text-base;
 
                 .service__title {
-                    padding: 0 1em 0 0;
+                    padding: 0 $spacing-small 0 0;
+                    font-family: $font-title;
+                    font-size: $text-base;
                     border-right: solid 2px #000;
                 }
+            }
+            .service__texto {
+                font-size: $text-small*0.9;
+                list-style-type: disc;
             }
         }
         &__image1-3 {
             display: flex;
             justify-content: flex-end;
             flex: 1 1 50%;
-            max-width: 400px;
-
-            img {
-                width: 100%;
-            }
+            max-width: 350px;
         }
         &__image2 {
             display: flex;
             justify-content: flex-start;
             flex: 1 1 50%;
-            max-width: 400px;
-
-            img {
-                width: 100%;
-            }
+            max-width: 350px;
         }
         #service__content2 {
-            padding: 0 0 0 2em;
+            padding: 0 0 0 $spacing-medium;
 
             .service__tittle-description {
                 display: flex;
 
                 #servicio2 {
-                    padding: 0 0 0 1em;
+                    padding: 0 0 0 $spacing-small;
                     border-left: solid 2px #000;
                     border-right: 0;
                 }
@@ -74,10 +75,10 @@
             }
         }
         #service__content4 {
-            padding: 0 0 0 2em;
+            padding: 0 0 0 $spacing-medium;
 
             #servicio4 {
-                padding: 0 0 0 1em;
+                padding: 0 0 0 $spacing-small;
                 border-left: solid 2px #000;
                 border-right: 0;
             }
@@ -102,12 +103,9 @@
                 .service__tittle-description {
                     padding-top: 2em;
                     justify-content: center;
-                    
+
                     p {
                         text-align: right;
-                    }
-                    .service__title {
-                        font-size: large;
                     }
                 }
                 .service__texto {
