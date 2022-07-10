@@ -32,7 +32,8 @@ a {
   text-decoration: none; }
 
 img {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .none {
   display: none;
@@ -272,7 +273,9 @@ img {
         margin-top: 1rem;
         padding: 1rem;
         width: 100%;
-        font-size: 1.4em; }
+        font-size: 1.4em;
+        border-color: #000;
+        border-radius: 5px; }
       .footer__suscribe .footer__suscribe-form #suscribe-btn {
         background-color: #f05742;
         color: #fff;
@@ -337,12 +340,15 @@ img {
   padding-right: 10%; }
   .main-body__about-section p {
     font-size: 2.88em;
+    font-family: "Nunito", sans-serif;
     text-align: right;
-    line-height: normal; }
+    line-height: normal;
+    color: #000; }
     .main-body__about-section p a {
+      font-family: "Nunito", sans-serif;
       display: block;
-      text-decoration: underline;
-      color: #000; }
+      color: #000;
+      font-size: 0.84em; }
 
 .main-body__services-section {
   margin-left: 10%;
@@ -415,8 +421,8 @@ img {
       font-size: 1.4em;
       width: 60%;
       padding: 1rem;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
       border-top: solid 2px #000;
       border-bottom: solid 2px #000;
       border-left: solid 2px #000; }
@@ -428,8 +434,8 @@ img {
       border-top: solid 2px #000;
       border-bottom: solid 2px #000;
       border-right: solid 2px #000;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
       cursor: pointer;
       background-color: #fff;
       padding: 1rem; }
@@ -681,7 +687,9 @@ img {
         padding: 0.3em; }
       .main-body__contact-social .contact-social__icon a, .main-body__contact-social .contact-social__email a {
         color: #000;
-        font-size: 1.6em; }
+        font-size: 1.6em;
+        display: flex;
+        gap: 0.4rem; }
 
 @media (min-width: 320px) and (max-width: 800px) {
   .contact-form {
@@ -827,8 +835,8 @@ img {
   background-color: #FFE8E1;
   display: flex;
   gap: 2.4rem;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
   justify-content: space-around; }
   .main-body__about-content .main-body__about-img {
     display: flex;
@@ -836,6 +844,9 @@ img {
     padding-top: 2.4rem;
     padding-bottom: 6rem;
     width: 50vw; }
+    .main-body__about-content .main-body__about-img img {
+      border-radius: 10px;
+      box-shadow: 0px 1px 2px #00000033, 0 0 1.5px #00000066; }
   .main-body__about-content .main-body__about-text {
     padding-top: 2.4rem;
     padding-bottom: 6rem;

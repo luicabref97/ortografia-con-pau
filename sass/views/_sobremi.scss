@@ -29,8 +29,8 @@
     background-color: #FFE8E1;
     display: flex;
     gap: $spacing-medium;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
     justify-content: space-around;
 
     .main-body__about-img {
@@ -39,6 +39,11 @@
         padding-top: $spacing-medium;
         padding-bottom: $spacing-large;
         width: 50vw;
+        
+        img {
+            border-radius: 10px;
+            box-shadow: 0px 1px 2px #00000033, 0 0 1.5px #00000066;
+        }
     }
     .main-body__about-text {
         padding-top: $spacing-medium;

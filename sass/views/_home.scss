@@ -10,13 +10,16 @@
 
     p {
         font-size: $text-medium*1.2;
+        font-family: $font-title;
         text-align: right;
         line-height: normal;
+        color: $text-color;
 
         a {
+            font-family: $font-title;
             display: block;
-            text-decoration: underline;
             color: $text-color;
+            font-size: $text-small*0.6;
         }
     }
 }
@@ -113,8 +116,8 @@
             font-size: $text-small;
             width: 60%;
             padding: $spacing-xsmall;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
             border-top: solid 2px $text-color;
             border-bottom: solid 2px $text-color;
             border-left: solid 2px $text-color;
@@ -127,8 +130,8 @@
             border-top: solid 2px $text-color;
             border-bottom: solid 2px $text-color;
             border-right: solid 2px $text-color;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
             cursor: pointer;
             background-color: $base;
             padding:  $spacing-xsmall;
