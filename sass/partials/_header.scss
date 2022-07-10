@@ -35,6 +35,7 @@
         &__logo {
             @include max-sizes(200px, 200px);
             @include min-sizes(130px, 130px);
+
         }
         &__list {
             @include flex(row, start, center, 0);
