@@ -9,10 +9,154 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referer="no-referrer"/> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
-    <link rel="stylesheet" href="./css/translated.css">
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    :root {
+    /* Colors */
+    --primary: #f05742;
+    --secondary: #ffe8e1;
+    --alternative: #ffc1ae;
+    --text-color: #000;
+    --base: #fff;
+    /* Spacings */
+    --spacing-large: 6rem;
+    --spacing-medium: 2.4rem;
+    --spacing-small: 2rem;
+    --spacing-xsmall: 1rem;
+    /* Font-familys */
+    --font-principal: "PT Sans", sans-serif;
+    --font-title: "Nunito", sans-serif;
+    /* Font-sizes */
+    --text-large: 5.2em;
+    --text-medium: 2.4em;
+    --text-base: 1.6em;
+    --text-small: 1.4em;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--font-principal);
+}
+ul {
+    list-style-type: none;
+}
+a {
+    font-family: var(--font-title);
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.body-404 {
+    background-color: var(--secondary);
+    padding-top: 10%;
+}
+.container-404 {
+    display: flex;
+    padding: 5%;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.container-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.container-text h1 {
+    font-family: var(--font-title);
+    font-size: var(--text-large);
+    font-weight: 900;
+    padding-bottom: var(--spacing-xsmall);
+}
+.container-text h2 {
+    font-family: var(--font-title);
+    font-size: calc(var(--text-medium)*1.2);
+    font-weight: 400;
+    padding-bottom: var(--spacing-xsmall);
+}
+.container-text p {
+    font-size: var(--text-base);
+}
+
+.container-text .btns {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-large);
+    gap: var(--spacing-small);
+}
+.btn-home a,  .btn-contact a {
+    font-family: var(--font-title);
+    font-size: var(--text-base);
+    text-align: center;
+    padding: var(--spacing-xsmall);
+    background-color: var(--primary);
+    color: var(--base);
+    font-weight: 400;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 5px #00000033, 0 0 3px #00000066;
+}
+.container-imgs {
+    display: flex;
+}
+.container-imgs .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-imgs .logo-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-404 p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-404 p span {
+    font-family: var(--font-title);
+    font-size: calc(var(--text-large)*1.8);
+    color: var(--primary);
+}   
+.logo-404 p img {
+    width: 100px;
+}
+
+@media (min-width:320px) and (max-width: 860px) {
+
+.body-404 .container-404 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+}
+.body-404 .container-404 .container-text {
+    order: 1;
+}
+}
+
+@media (min-width:320px) and (max-width: 460px) {
+
+.body-404 .container-404 .container-imgs .logo-404 p span {
+    font-family: var(--font-title);
+    font-size: calc(var(--text-large)*1.6);
+    color: var(--primary);
+}
+.body-404 .container-404 .container-imgs .logo-404 img {
+    width: 80px;
+}
+}
+
+</style>
 <body class="body-404">
     <main class="main-body__404">
         <div class="container-404">
